@@ -143,6 +143,39 @@ document.addEventListener('DOMContentLoaded', async () => {
             renderLeaderboard(sortedData);
         });
 
+        
+            const pinContainer =
+                   document.getElementById('pin-container');
+               const pinnedItems = [
+            {     
+                title :"ROLL NUMBER",
+            },
+            {
+                title:"NAME"
+            }];
+            function create(item) {
+                const pin = document.createElement('div');
+                pin.classList.add('pin');
+            }  
+        
+         const pinrow=(row)=>{
+            row.style.position='sticky';
+            row.style.top='0';
+            row.style.backgroundColor='purple';
+            row.style.zindex='2';
+         };
+         const pinnedflow=document.getElementById('pinrow');
+        
+         if(pinnedflow){
+            pinnedflow.style.position='sticky';
+            row.style.top='0';
+            row.style.backgroundColor='purple';
+            row.style.zindex='2';
+         }
+
+
+
+
     } catch (error) {
         console.error('Error fetching data:', error);
     }
